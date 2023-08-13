@@ -30,7 +30,7 @@ function pausePlayAudio() {
     MAINBODY.style.color = "#000";
   }
 }
-MAINBODY.onfocus = () =>
+MAINBODY.onload = () =>
   setTimeout(() => {
     alert(
       "Hello MJ fan. Click the play button on the top-left to see MAGIC!!!."
