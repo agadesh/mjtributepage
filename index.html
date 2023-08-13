@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="style.css" />
   <title id="title">Michael Jackson-Tribute page</title>
 </head>
-<div id="myAudioBtn" onclick="pausePlayAudio()" class="triangle-right playing-audio"></div>
+<div id="myAudioBtn" onclick="pausePlayAudio()" class="triangle-right"></div>
 
-<body>
-  <audio autoplay id="myAudio">
-    <source src="./thriller.mp3" type="audio/mpeg">
+<body id="MAINBODY">
+  <audio id="myAudio">
+    <source src="./assets/thriller.mp3" type="audio/mpeg">
     Audio not supported by browser
   </audio>
   <main id="main">
@@ -20,7 +20,11 @@
       alt="watermark" />
     <img src="https://webstockreview.net/images250_/glove-clipart-glove-michael-jackson-7.png" id="watermark2"
       alt="watermark" />
-    <h1 id="title">Michael Jackson </h1>
+    <div id="container">
+      <div id="colorShow" class="">
+        <h1 id="title">Michael Jackson </h1>
+      </div>
+    </div>
     <p id="s-title">A tribute page for legendary artist Michael Jackson, the "King of Pop".</p>
     <figure id="img-div">
       <img
@@ -187,22 +191,7 @@
       </div>
     </section>
   </main>
-  <script>
-    let aud = document.getElementById("myAudio");
-    let audBtn = document.getElementById("myAudioBtn");
-    aud.volume = 0.3;
-    aud.currentTime = 37;
-    function pausePlayAudio() {
-      if (aud.paused) {
-        aud.play()
-      }
-      else {
-        aud.pause()
-      }
-      audBtn.classList.toggle('playing-audio')
-    }
-  </script>
-
+  <script src="./script.js"></script>
 </body>
 
 </html>
